@@ -14,7 +14,9 @@ class TabLink {
     this.tabItem = new TabItem(this.itemElement);
   
     // Add a click event listener on this instance, calling the select method on click
-    this.element.addEventListener('click', select)
+    this.element.addEventListener('click', () => {
+      this.select();
+    })
   };
 
   select() {
@@ -59,4 +61,4 @@ class TabItem {
 
 */
 
-links = document.querySelectorAll('.tab-links').forEach(link => new TabLink(link));
+links = document.querySelectorAll('.tabs-link').forEach(link => new TabLink(link));
